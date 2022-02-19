@@ -141,28 +141,38 @@ html{
         
     }
 
-    
-        .button{
-        
-            width: 100px;
-            padding: 10px;
-            border: 1px solid;
-            border-radius: 15px ;
-            transition: all ease 200ms;
-            background-color: #ffffffc2;
 
-        
-        }
+.button{
+   
+    width: 100px;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 15px ;
+    transition: all ease 200ms;
 
-        .button:hover{
-            border-color:  #0000ff;
-            box-shadow: 1px 1px 5px #6d6dff;
-            background-color: #ffffff;
-            cursor: pointer;
-        }
-        .button:active{
-            border-color:  #0000ff;
-            box-shadow: 1px 1px 10px #6d6dff;
-            background-color: #394c70;
-        }
+
+  
 }
+
+.button:hover{
+    border-color:  #0000ff;
+    box-shadow: 1px 1px 5px #6d6dff;
+    background-color: #ffffff;
+}
+.button:active{
+    border-color:  #0000ff;
+    box-shadow: 1px 1px 10px #6d6dff;
+    background-color: #394c70;
+}
+
+
+
+#txt{
+    transform: translate(-10px);  
+  }
+     
+}
+
+
+
+
