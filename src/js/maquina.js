@@ -8,7 +8,7 @@ let arrayText = palabras.split(',')
 
 console.log(arrayText)
 
-const maquina = (arrayText, tiempo) => {
+const maquina = (arrayText, timeTyped, timeDeleted) => {
 
    
 
@@ -18,58 +18,59 @@ const maquina = (arrayText, tiempo) => {
     let index = 0;
     let estado = true
 
-    setInterval(() => {
-        if (contador < size) {
-
-            if (index < arrayText[contador].length && estado) {
-
-                texto.innerHTML = arrayText[contador].slice(0, index +1) 
-                index++
-
-                if (index > arrayText[contador].length - 1) {
-
-                    estado = false
-                
-
-                    }
+        setInterval(() => {
+            if (contador < size) {
+    
+                if (index < arrayText[contador].length && estado) {
+    
+                    texto.innerHTML = arrayText[contador].slice(0, index +1) 
+                    index++
+    
+                    if (index > arrayText[contador].length - 1) {
+    
+                        estado = false
+                    
+    
+                        }
+                }
+            } else {
+                contador = 0
             }
 
-
-
-
-
-            if (index > arrayText[contador].length || !estado) {
-            
-
-                texto.innerText = arrayText[contador].slice(0, index) 
-
-                index--
-
-                if (index < 0) {
-                   
-                    texto.innerText = ""
-                    enfrente=false
-                    estado = true;
-                    contador++;
-                    index = 0; 
+            }, timeTyped)
+                
+            setInterval(()=>{
+                if (index > arrayText[contador].length || !estado) {
+                
+    
+                    texto.innerText = arrayText[contador].slice(0, index) 
+    
+                    index--
+    
+                    if (index < 0) {
+                       
+                        texto.innerText = ""
+                        enfrente=false
+                        estado = true;
+                        contador++;
+                        index = 0; 
+                    }
+    
                 }
 
-            }
-        } else {
-            contador = 0
-        }
-
-
+            },timeDeleted)
     
-
-    }, tiempo)
-
     
+    
+                
+            
+    
+        
 
 }
 
 
-maquina(arrayText, 150)
+maquina(arrayText, 200,120)
 
 
 

@@ -13,6 +13,35 @@ html{
     font-size: 16px;
     
 }
+
+h2{
+    color:rgb(180, 180, 180)
+}
+
+ .typed {
+    display: inline-block;
+    width: 20px;
+    height: 30px;
+    background-color: #ffffff;
+    content: "";
+    font-size: 29px;
+    color: #8b8b8b !important;
+    animation-name: entrada;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+   
+  }
+  
+  @keyframes entrada {
+      0%{
+      opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    
+  }
 .contacto{
     position: relative;
     display: flex;
@@ -38,6 +67,7 @@ html{
         transition: all ease 200ms;
         background-color: #2e2e41;
         box-sizing: border-box;
+        
 
                 input[type="text"], input[type="number"], input[type="email"]{
                         box-sizing: border-box;
@@ -167,11 +197,28 @@ html{
 
 
 
-#txt{
-    transform: translate(-10px);  
-  }
+
      
 }
+
+
+    .mover{
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;  
+    position: relative;
+}
+
+.mover:hover { 
+    background-color: #101016;
+    &::after  {
+        position: absolute;
+        content: "";
+        width: 50px;
+        height: 50px;
+        background-color: #0000ff;
+        z-index: 1000;
+}}
 
 
 
